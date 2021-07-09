@@ -1,0 +1,62 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-clr1: #fafafa;
+    --bg-clr2: #5175ff;
+    --bg-clr3: #333951;
+}
+
+body {
+    background-color: var(--bg-clr1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 2vh;
+}
+
+.note, .birthyear {
+    color: gray;
+    margin: 2vh 0;
+}
+
+button {
+    display: block;
+}
+
+.birthyear, button {
+    padding: 5px 10px;
+}
+
+.day {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    border-radius: 10px;
+    font-size: .5rem;
+    border: 1px solid black;
+}
+
+.night {
+  background-color: rgba(27, 27, 27, 0.534);
+  color: white;
+}
+
+.outputmsg {
+    margin-top: 2vh;
+}
+
+

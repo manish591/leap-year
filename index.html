@@ -8,14 +8,19 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div class="container">
-        <p class="description">This app will input your date of birth and based on certain calculation it will tell you whether your birth year is leap year or not.</p>
-        <p class="note">Note: Please input your birth year in YYYY format.</p>
-        <label for="year">Input your birth year below</label>
-        <input type="text" class="birthyear" id="year" placeholder="YYYY">
-        <button class="calculate">Calculate</button>
-        <div class="output"></div>
-    </div>
+        <div class="container">
+            <button class="day">Night</button>
+            <div class="input">
+                <h1 class="title">Is Your Birth Year A Leap Year?</h1>
+                <p class="description">This app will input your date of birth and based on certain calculation it will tell you whether your birth year is leap year or not.</p>
+                <p class="note">Note: Please input your birth year in YYYY format.</p>
+                <label for="year">Input your birth year below</label>
+                <input type="text" class="birthyear" id="year" placeholder="YYYY">
+                <button class="calculate">Calculate</button>
+                <h2 class="outputmsg"></h2>
+            </div>
+        </div>
+   
     <script src="/leap.js"></script>
 </body>
 </html>
