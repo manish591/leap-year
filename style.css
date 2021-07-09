@@ -28,9 +28,9 @@ body {
     margin-bottom: 2vh;
 }
 
-.note, .birthyear {
+.note{
     color: gray;
-    margin: 2vh 0;
+    margin: 2vh 0; 
 }
 
 button {
@@ -39,6 +39,13 @@ button {
 
 .birthyear, button {
     padding: 5px 10px;
+    margin-bottom: 3vh;
+    border: 1px solid black;
+}
+
+.birthyear {
+    margin-top: 1vh;
+    display: block;
 }
 
 .day {
@@ -59,4 +66,17 @@ button {
     margin-top: 2vh;
 }
 
+label {
+    font-size: .7rem;
+}
 
+
+@media only screen and (min-width: 700px) {
+    .container {
+        width: 50vw;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+}
