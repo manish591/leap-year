@@ -4,29 +4,36 @@ const output = document.querySelector('.outputmsg');
 const day = document.querySelector('.day');
 
 function showLeapYear () {
-    let inputYear = parseInt(birthYear.value);
+    let inputBirthYear = birthYear.value;
+    let birthArray = inputBirthYear.split("-");
+    let inputYear = birthArray[0];
 
-    if (birthYear.value === '' || birthYear.value.length !== 4) {
+    if (birthYear.value === '') {
         return output.innerHTML = 'Please Input your birth year correctly!';
     }
 
-    if (inputYear % 4 === 0) {
-        if (inputYear % 100 === 0) {
-            if (inputYear % 400 === 0) {
-                output.innerText = `Your birth year ${inputYear} is a leap year!`;
-            } else {
-                output.innerText = `Your birth year ${inputYear} is not a leap year!`;
-            }
-        } else {
-            output.innerText = `Your birth year ${inputYear} is a leap year!`;
-        }
-    } else {
-        output.innerText = `Your birth year ${inputYear} is not a leap year!`;
-    }
+    calculateLeapYear(inputYear);
 
     birthYear.value = '';
 
 }
+
+function calculateLeapYear(yearInput) {
+    if (yearInput % 4 === 0) {
+        if (yearInput % 100 === 0) {
+            if (yearInput % 400 === 0) {
+                output.innerText = `Your birth year ${yearInput} is a leap year!`;
+            } else {
+                output.innerText = `Your birth year ${yearInput} is not a leap year!`;
+            }
+        } else {
+            output.innerText = `Your birth year ${yearInput} is a leap year!`;
+        }
+    } else {
+        output.innerText = `Your birth year ${yearInput} is not a leap year!`;
+    }
+}
+
 
 calculateBtn.addEventListener('click', showLeapYear);
 
